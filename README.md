@@ -1,4 +1,5 @@
 Getting Started
+
 To get started with the project, clone the repository and install the dependencies:
 
 git clone https://github.com/Nareneder/ScatterPlot-BarChart.git
