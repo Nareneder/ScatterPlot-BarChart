@@ -4,7 +4,7 @@ This is a sample React application that displays a scatter plot and a bar chart 
 Getting Started
 To get started with the project, clone the repository and install the dependencies:
 
-git clone https://github.com/your-username/wine-data-visualization.git
+git clone https://github.com/Nareneder/ScatterPlot-BarChart.git
 cd wine-data-visualization
 npm install
 Running the Application
