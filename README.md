@@ -25,7 +25,7 @@ This project uses the following dependencies:
 
 Here is the screenshots of the scatter plot and bar chart working properly
 
-https://www.linkpicture.com/q/Screenshot-2023-04-08-153558.png
+https://www.linkpicture.com/q/Screenshot-2023-04-08-165807.png
 
-https://www.linkpicture.com/q/Screenshot-2023-04-08-153625_1.png
+https://www.linkpicture.com/q/Screenshot-2023-04-08-165910.png
 

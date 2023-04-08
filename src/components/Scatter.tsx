@@ -1,23 +1,51 @@
-import ReactEcharts from "echarts-for-react";
+import React from 'react';
+import ReactEcharts from 'echarts-for-react';
 
-type ScatterProps = {
-  data: { name: string; value: [number, number] }[];
-};
+interface WineData {
+  Alcohol: number;
+  "Malic Acid": number;
+  Ash: number;
+  "Alcalinity of ash": number;
+  Magnesium: number;
+  "Total phenols": number;
+  Flavanoids: number;
+  "Nonflavanoid phenols": string;
+  Proanthocyanins: string;
+  "Color intensity": number;
+  Hue: number;
+  "OD280/OD315 of diluted wines": string;
+  Unknown: number;
+}
 
-const Scatter: React.FC<ScatterProps> = ({ data }) => {
+interface ScatterPlotProps {
+  data: WineData[];
+}
+
+const ScatterPlot: React.FC<ScatterPlotProps> = ({ data }) => {
+
+  // transform the data into ECharts format
+  const chartData = data.map((item) => {
+    return [item["Color intensity"], item.Hue];
+  });
+
   const option = {
-    xAxis: {},
-    yAxis: {},
-    series: [
-      {
-        symbolSize: 20,
-        data: data,
-        type: "scatter",
-      },
-    ],
+    xAxis: {
+      type: 'value',
+      name: 'Color intensity',
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Hue',
+    },
+    series: [{
+      data: chartData,
+      type: 'scatter',
+    }]
   };
 
-  return <ReactEcharts option={option} style={{ height: "500px" }} />;
+  return (
+    <ReactEcharts option={option} />
+  );
 };
 
-export default Scatter;
+export default ScatterPlot;
