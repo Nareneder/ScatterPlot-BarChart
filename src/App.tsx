@@ -4,19 +4,19 @@ import wineData from "./wine-data.json";
 import BarChart from "./components/BarChart.tsx";
 
 type WineData = {
-  Alcohol: number;
+  "Alcohol": number;
   "Malic Acid": number;
-  Ash: number;
+  "Ash": number;
   "Alcalinity of ash": number;
-  Magnesium: number;
+  "Magnesium": number;
   "Total phenols": number;
-  Flavanoids: number;
-  "Nonflavanoid phenols": number;
-  Proanthocyanins: number;
+  "Flavanoids": number;
+  "Nonflavanoid phenols": string;
+  "Proanthocyanins": string;
   "Color intensity": number;
-  Hue: number;
-  "OD280/OD315 of diluted wines": number;
-  Unknown: number;
+  "Hue": number;
+  "OD280/OD315 of diluted wines": string;
+  "Unknown": number;
 };
 
 const App: React.FC = () => {
@@ -24,7 +24,6 @@ const App: React.FC = () => {
   const [barData, setBarData] = useState<{ name: string; value: number }[]>([]);
 
   useEffect(() => {
-    // Process the wine data into the format expected by the charts
     const processedScatterData = wineData.map((d: WineData) => ({
       name: `Wine ${d.Alcohol}`,
       value: [d["Malic Acid"], d.Ash],
@@ -40,9 +39,9 @@ const App: React.FC = () => {
 
   return (
     <div>
-      <h1>Wine Data Scatter Plot</h1>
+      <h1>Scatter Plot</h1>
       <Scatter data={scatterData} />
-      <h1>Wine Data Bar Chart</h1>
+      <h1>Bar Chart</h1>
       <BarChart data={barData} />
     </div>
   );

@@ -5,7 +5,7 @@ Getting Started
 To get started with the project, clone the repository and install the dependencies:
 
 git clone https://github.com/Nareneder/ScatterPlot-BarChart.git
-cd wine-data-visualization
+cd ScatterPlot-BarChart
 npm install
 Running the Application
 To run the application, use the following command:
