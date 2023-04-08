@@ -1,6 +1,3 @@
-Wine Data Visualization
-This is a sample React application that displays a scatter plot and a bar chart using the ECharts library. The data used in the charts is from a wine dataset and is provided as a JSON file.
-
 Getting Started
 To get started with the project, clone the repository and install the dependencies:
 
