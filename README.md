@@ -22,3 +22,10 @@ This project uses the following dependencies:
 
 1. React
 2. ECharts for React
+
+Here is the screenshots of the scatter plot and bar chart working properly
+
+https://www.linkpicture.com/q/Screenshot-2023-04-08-153558.png
+
+https://www.linkpicture.com/q/Screenshot-2023-04-08-153625_1.png
+
